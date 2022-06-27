@@ -1,6 +1,4 @@
-import "./styles/index.scss"
+import {render} from 'react-dom';
+import {App} from './components/App';
 
-export const a = 1;
-const b = 22;
-console.log(a);
-console.log(b);
+render(<App/>, document.getElementById('root'));

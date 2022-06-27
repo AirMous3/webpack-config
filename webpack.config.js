@@ -4,7 +4,7 @@ let target = 'web';
 
 if (process.env.NODE_ENV === 'production') {
     mode = 'production';
-    target = 'browserslist'
+    target = 'browserslist';
 }
 
 module.exports = {
@@ -23,7 +23,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: /node-modules/,
                 use: {
                     loader: 'babel-loader',
@@ -34,6 +34,9 @@ module.exports = {
 
     plugins: [new MiniCssExtractPlugin()],
 
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
     devtool: 'source-map',
     devServer: {
         static: ['./dist'],

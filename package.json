@@ -10,17 +10,7 @@
     "build-dev": "webpack",
     "clean": "rm -rf dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AirMous3/webpack-config.git"
-  },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AirMous3/webpack-config/issues"
-  },
-  "homepage": "https://github.com/AirMous3/webpack-config#readme",
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",

@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
@@ -16,7 +16,7 @@ module.exports = {
     target: target,
 
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, 'dist'),
         assetModuleFilename: 'images/[hash][ext][query]'
     },
 
@@ -41,6 +41,13 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                 },
+            },
+            {
+                test: /\.tsx?$/,
+                exclude: /node-modules/,
+                use: {
+                    loader: 'ts-loader',
+                },
             }
         ]
     },
@@ -54,9 +61,9 @@ module.exports = {
     ],
 
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
         alias: {
-            "@assets": path.resolve(__dirname, 'src/assets'),
+            '@assets': path.resolve(__dirname, 'src/assets'),
             '@': path.resolve(__dirname, 'src/'),
         },
     },
